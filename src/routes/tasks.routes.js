@@ -11,24 +11,7 @@ router.get('/', tasksController.get);
 // });
 
 router.post('/', tasksController.create);
-
-// // Update one center
-// router.patch('/:id', getCenter, async (req, res) => {
-//     if (req.body.name != null) {
-//         res.center.name = req.body.name;
-//     }
-
-//     if (req.body.location != null) {
-//         res.center.location = req.body.location;
-//     }
-
-//     try {
-//         const updatedCenter = await res.center.save();
-//         res.json(updatedCenter);
-//     } catch (err) {
-//         res.status(400).json({ message: err.message });
-//     }
-// });
+router.put('/:id', tasksController.update);
 
 // // Delete one center
 // router.delete('/:id', getCenter, async (req, res) => {
